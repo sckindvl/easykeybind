@@ -17,9 +17,10 @@ This resource adds a simplified system for creating Keybinds ingame. It helps yo
  * @param {string} virtualKey - Virtual key code in hex format (e.g., "0x41" for A key).
  * @param {boolean} onKeyUp - If true, the keybind triggers on key release; otherwise, on key press.
  * @param {Function} functionToExecute - Callback function to execute when the keybind is triggered.
+ * @param {int} antispamMs - Adds anti-spam when the keybind is triggered.
  * @returns {boolean} True if the keybind was added successfully, false if it already exists or invalid.
  */
-mp.helper.keybind.add = function(keybindName, virtualKey, onKeyUp, functionToExecute, holdKeyToExecute = false, holdKeyTime = 0, showHoldBar = false);
+mp.helper.keybind.add = function(keybindName, virtualKey, onKeyUp, functionToExecute, antispamMs);
 
 /**
  * Removes a keybind from the system.
